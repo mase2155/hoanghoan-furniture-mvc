@@ -5,12 +5,14 @@
 ---
 
 ## 1.Overview
+
 **Hoang Hoan Furniture** is an e-commerce and store management web application built for a furniture workshop. 
 The project helps customers search for products, view details, and send consultation requests. It also helps administrators manage product catalogs, blog posts, and contact requests efficiently.
 
 ---
 
 ## 2.Tech Stack
+
 * **Backend:** ASP.NET Core 8 MVC, Entity Framework Core 8, ASP.NET Core Identity.
 * **Frontend:** HTML5, CSS3, Bootstrap 5, JavaScript (ES6+), jQuery.
 * **Database:** Microsoft SQL Server.
@@ -32,11 +34,13 @@ The project follows the **MVC (Model-View-Controller)** pattern with a clean str
 ## 4. User Roles & Features
 
 ### 👤 Customer Role
+
 * **Home Page:** View banners, featured categories, and latest news.
 * **Browse Products:** View product list, filter by price/category, and view variant details (material, size).
 * **Send Requests:** Fill out contact/quote request forms directly sent to the workshop.
 
 ### 🛠️ Admin Role
+
 * **Product Management:** Add, edit, hide/delete categories, products, variants, and upload multiple images.
 * **Content Management:** Create blog posts, edit home page banners, and update static content blocks.
 * **Inquiry Management:** View and update status for customer consultation requests (`New` -> `InProgress` -> `Done`).
@@ -51,12 +55,13 @@ The project follows the **MVC (Model-View-Controller)** pattern with a clean str
 * Visual Studio 2022
 
 ### Step-by-Step Guide
+
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/hungld/hoanghoan-furniture-aspnet.git](https://github.com/hungld/hoanghoan-furniture-aspnet.git)
    cd hoanghoan-furniture-aspnet
    ``` 
-2. Configure Database
+2. **Configure Database :**
 
 In `appsettings.json` file:
 
@@ -65,7 +70,7 @@ In `appsettings.json` file:
 ```
 
 
-3. Apply Migrations & Seed Data
+3. **Apply Migrations & Seed Data :**
 
 In Visual Studio Package Manager Console:
 
