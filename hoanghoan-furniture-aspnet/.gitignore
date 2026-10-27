@@ -1,0 +1,23 @@
+## Visual Studio / C# / .NET Core
+/[Bb]in/
+/[Oo]bj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## ASP.NET / Environment configuration & Secrets
+appsettings.json
+appsettings.Development.json
+
+## Backup / Temp files
+*.bak
+*.cache
+*~
+.DS_Store
+Thumbs.db
+
+## Publish folder
+/[Pp]ublish/
+/[Rr]elease/
