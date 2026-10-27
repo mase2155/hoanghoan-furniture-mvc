@@ -60,12 +60,10 @@ The project follows the **MVC (Model-View-Controller)** pattern with a clean str
 
 In `appsettings.json` file:
 
-Update your SQL Server connection string:
+``` 
+    Update your SQL Server connection string for yourself 
+```
 
-```json
-"ConnectionStrings": {
-  "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=HoangHoanDb;Trusted_Connection=True;TrustServerCertificate=True" }
-  ```
 
 3. Apply Migrations & Seed Data
 
