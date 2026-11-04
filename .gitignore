@@ -1,0 +1,28 @@
+## Visual Studio
+/[Bb]in/
+/[Oo]bj/
+.vs/
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+
+## ASP.NET Core User Secrets
+
+
+## Serilog Logs
+Logs/
+/logs/
+*.log
+
+## Backup and Database files
+*.bak
+*.mdf
+*.ldf
+
+## VS Code
+.vscode/
+
+## OS generated files
+.DS_Store
+Thumbs.db
