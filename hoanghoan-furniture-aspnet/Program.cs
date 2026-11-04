@@ -1,6 +1,7 @@
-using hoanghoan_furniture_aspnet.Data;
+﻿using hoanghoan_furniture_aspnet.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace hoanghoan_furniture_aspnet
 {
@@ -10,8 +11,19 @@ namespace hoanghoan_furniture_aspnet
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            Log.Logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(builder.Configuration)
+                .Enrich.FromLogContext()
+                .CreateLogger();
+
+            builder.Host.UseSerilog();
+
+            try
+            {
+                Log.Information(">>> Đang khởi chạy ứng dụng HoangHoan Furniture...");
+
+                // Add services to the container.
+                var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -19,6 +31,8 @@ namespace hoanghoan_furniture_aspnet
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
+
+
 
             var app = builder.Build();
 
@@ -34,11 +48,15 @@ namespace hoanghoan_furniture_aspnet
                 app.UseHsts();
             }
 
+            app.UseSerilogRequestLogging();
+
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
@@ -47,6 +65,15 @@ namespace hoanghoan_furniture_aspnet
             app.MapRazorPages();
 
             app.Run();
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "Ứng dụng gặp lỗi nghiêm trọng và không thể khởi chạy!");
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
         }
     }
 }
