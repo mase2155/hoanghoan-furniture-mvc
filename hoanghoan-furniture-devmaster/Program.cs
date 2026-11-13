@@ -1,6 +1,7 @@
-using hoanghoan_furniture_devmaster.Data;
+﻿using hoanghoan_furniture_devmaster.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace hoanghoan_furniture_devmaster
 {
@@ -9,6 +10,12 @@ namespace hoanghoan_furniture_devmaster
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            Log.Logger = new LoggerConfiguration()
+            .ReadFrom.Configuration(builder.Configuration)
+            .Enrich.FromLogContext()
+            .CreateLogger();
+
+            builder.Host.UseSerilog();
 
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -21,6 +28,8 @@ namespace hoanghoan_furniture_devmaster
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
+
+            app.UseSerilogRequestLogging();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -44,6 +53,19 @@ namespace hoanghoan_furniture_devmaster
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            try
+            {
+                Log.Information("Ứng dụng đang khởi động...");
+                app.Run();
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "Ứng dụng bị lỗi khi khởi động!");
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
             app.MapRazorPages();
 
             app.Run();
