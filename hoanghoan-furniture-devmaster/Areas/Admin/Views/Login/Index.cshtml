@@ -1,0 +1,69 @@
+﻿@model hoanghoan_furniture_devmaster.Areas.Admin.Models.Login
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | AdminPanel</title>
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+    <!-- File CSS riêng của bạn -->
+    <link rel="stylesheet" href="~/css/admin-login.css" asp-append-version="true" />
+</head>
+<body class="login-page">
+
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="#"><b>Admin</b>CPane</a>
+        </div>
+
+        <div class="login-card">
+            <div class="card-body">
+                <p class="login-box-msg">Sign in to start your session</p>
+
+                <form asp-area="Admin" asp-controller="Login" asp-action="Index" method="post">
+                    <!-- Ô nhập Email / Tài khoản -->
+                    <div class="input-group">
+                        <input type="email" class="form-control" asp-for="email" placeholder="Email...">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-danger" asp-validation-for="email"></span>
+
+                    <!-- Ô nhập Password -->
+                    <div class="input-group">
+                        <input type="password" class="form-control" asp-for="password" placeholder="Password...">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-danger" asp-validation-for="password"></span>
+
+                    <!-- Phần ghi nhớ và nút Submit -->
+                    <div class="login-row">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember Me</label>
+                        </div>
+                        <button type="submit" class="btn-signin">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

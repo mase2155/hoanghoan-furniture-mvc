@@ -21,12 +21,22 @@ namespace hoanghoan_furniture_devmaster
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
+
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
+
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromHours(8);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+                options.Cookie.Name = ".DinhHung.Session";
+            });
 
             var app = builder.Build();
 
@@ -52,6 +62,8 @@ namespace hoanghoan_furniture_devmaster
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseSession();
             
 
             app.MapControllerRoute(
@@ -75,9 +87,6 @@ namespace hoanghoan_furniture_devmaster
             {
                 Log.CloseAndFlush();
             }
-            
-
-            app.Run();
         }
     }
 }

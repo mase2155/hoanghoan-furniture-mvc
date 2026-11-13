@@ -1,5 +1,7 @@
+wwwroot\css\admin-login.css
 wwwroot\css\font.css
 wwwroot\css\layout.css
+wwwroot\css\layout_admin.css
 wwwroot\favicon.ico
 wwwroot\fonts\Gotham-Medium.otf
 wwwroot\fonts\Gotham-Thin.otf
@@ -164,4 +166,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\layout_admin.css

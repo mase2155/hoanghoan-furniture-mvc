@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lr1e1a5tXHU=",
+  "dgSpecHash": "ks/PZqi1Fzk=",
   "success": true,
-  "projectFilePath": "D:\\hoanghoan-furniture-mvc\\hoanghoan-furniture-devmaster\\hoanghoan-furniture-devmaster.csproj",
+  "projectFilePath": "D:\\hoanghoan-furniture-mvc\\hoanghoan-furniture-devmaster\\hoanghoan_furniture_devmaster.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\azure.core\\1.41.0\\azure.core.1.41.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.identity\\1.12.1\\azure.identity.1.12.1.nupkg.sha512",

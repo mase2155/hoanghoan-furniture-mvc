@@ -290,4 +290,4 @@ D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\tr\Mic
 D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\obj\Debug\net8.0\swae.build.ex.cache

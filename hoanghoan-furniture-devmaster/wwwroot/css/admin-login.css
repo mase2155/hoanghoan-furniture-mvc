@@ -1,0 +1,133 @@
+﻿/* Reset và cấu hình chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.login-page {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #e9ecef;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Khung bọc form đăng nhập */
+.login-box {
+    width: 360px;
+}
+
+.login-logo {
+    font-size: 2.1rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .login-logo a {
+        color: #444;
+        text-decoration: none;
+    }
+
+    .login-logo b {
+        font-weight: 700;
+    }
+
+/* Thẻ Card chứa form */
+.login-card {
+    background: #ffffff;
+    border-top: 3px solid #007bff;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.login-box-msg {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+/* Nhóm ô nhập liệu (Input Group) */
+.input-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+    .input-group .form-control {
+        flex: 1;
+        height: 40px;
+        padding: 6px 12px;
+        font-size: 1rem;
+        border: 1px solid #ced4da;
+        border-right: none;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+        .input-group .form-control:focus {
+            border-color: #80bdff;
+        }
+
+.input-group-append {
+    display: flex;
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0 4px 4px 0;
+    color: #495057;
+}
+
+/* Dòng chứa Checkbox và nút bấm */
+.login-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: #495057;
+    cursor: pointer;
+}
+
+/* Nút Sign In */
+.btn-signin {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .btn-signin:hover {
+        background-color: #0056b3;
+    }
+
+/* Thông báo lỗi validation */
+.text-danger {
+    color: #dc3545;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}

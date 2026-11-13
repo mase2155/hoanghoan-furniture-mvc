@@ -8652,9 +8652,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\hoanghoan-furniture-mvc\\hoanghoan-furniture-devmaster\\hoanghoan-furniture-devmaster.csproj",
-      "projectName": "hoanghoan-furniture-devmaster",
-      "projectPath": "D:\\hoanghoan-furniture-mvc\\hoanghoan-furniture-devmaster\\hoanghoan-furniture-devmaster.csproj",
+      "projectUniqueName": "D:\\hoanghoan-furniture-mvc\\hoanghoan-furniture-devmaster\\hoanghoan_furniture_devmaster.csproj",
+      "projectName": "hoanghoan_furniture_devmaster",
+      "projectPath": "D:\\hoanghoan-furniture-mvc\\hoanghoan-furniture-devmaster\\hoanghoan_furniture_devmaster.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
       "outputPath": "D:\\hoanghoan-furniture-mvc\\hoanghoan-furniture-devmaster\\obj\\",
       "projectStyle": "PackageReference",
