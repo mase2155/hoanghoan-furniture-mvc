@@ -26,6 +26,7 @@ namespace hoanghoan_furniture_devmaster
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
 
             var app = builder.Build();
 
@@ -48,11 +49,19 @@ namespace hoanghoan_furniture_devmaster
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
+            
+
+            app.MapControllerRoute(
+                name: "areas",
+                pattern:"{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapRazorPages();
             try
             {
                 Log.Information("Ứng dụng đang khởi động...");
@@ -66,7 +75,7 @@ namespace hoanghoan_furniture_devmaster
             {
                 Log.CloseAndFlush();
             }
-            app.MapRazorPages();
+            
 
             app.Run();
         }
