@@ -1,0 +1,73 @@
+﻿:root {
+    /* ------------------------------------------------------------------------
+     1. Màu sắc (Colors)[cite: 4]
+     ------------------------------------------------------------------------ */
+    --color-gold: #C19A5B; /* Tiêu đề phụ, gạch chân, viền ô nhập, nút, sao, breadcrumb[cite: 4] */
+    --color-gold-dark: #8A6A33; /* Chữ vàng cỡ nhỏ (đạt tương phản AA)[cite: 4] */
+    --color-navy: #2B2D5C; /* Tiêu đề chính, tên sản phẩm, logo chữ[cite: 4] */
+    --color-ink: #1F1F1F; /* Menu, nội dung văn bản[cite: 4] */
+    --color-bg: #F2F2F2; /* Nền trang[cite: 4] */
+    --color-surface: #FFFFFF; /* Thẻ nội dung, header[cite: 4] */
+    --color-footer: #383838; /* Nền footer[cite: 4] */
+    --color-footer-heading: #FFFFFF; /* Tiêu đề footer[cite: 4] */
+    --color-footer-text: #D0D0D0; /* Liên kết footer[cite: 4] */
+    --color-error: #C0392B; /* Thông báo lỗi form[cite: 4] */
+    /* ------------------------------------------------------------------------
+     2. Kiểu chữ (Typography)[cite: 4]
+     ------------------------------------------------------------------------ */
+    --font-family-base: 'Gotham', sans-serif; /* Điền tên font của bạn vào đây[cite: 4] */
+    --font-size-heading: 2rem; /* ~32px */
+    --font-weight-heading: 700; /* 700 đến 800[cite: 4] */
+    /* Menu: 500, viết hoa, 15-16px[cite: 4] */
+    --font-size-menu: 1rem; /* 16px (hoặc 15px) */
+    --font-weight-menu: 500; /* 500[cite: 4] */
+    /* Nội dung (Body): 400, 15-16px, line-height 1.5[cite: 4] */
+    --font-size-body: 1rem; /* 16px */
+    --font-weight-body: 400; /* 400[cite: 4] */
+    --line-height-body: 1.5; /* 1.5[cite: 4] */
+    /* ------------------------------------------------------------------------
+     3. Khoảng cách (Spacing - Bội số của 8px)[cite: 4]
+     ------------------------------------------------------------------------ */
+    --space-1: 8px; /* 8 px[cite: 4] */
+    --space-2: 16px; /* 16 px[cite: 4] */
+    --space-3: 24px; /* 24 px[cite: 4] */
+    --space-4: 32px; /* 32 px[cite: 4] */
+    --space-6: 48px; /* 48 px[cite: 4] */
+    --space-8: 64px; /* 64 px[cite: 4] */
+    /* ------------------------------------------------------------------------
+     4. Bo góc & Viền (Borders & Radius)[cite: 4]
+     ------------------------------------------------------------------------ */
+    --radius-sm: 2px; /* 0 đến 2 px cho nút, ô nhập, thẻ[cite: 4] */
+    --border-input: 2px solid var(--color-gold); /* Viền ô nhập: 2 px màu vàng[cite: 4] */
+}
+
+/* ==========================================================================
+   Khởi tạo quy chuẩn cơ bản dùng chung[cite: 4]
+   ========================================================================== */
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    line-height: var(--line-height-body);
+    color: var(--color-ink);
+    background-color: var(--color-bg);
+}
+
+h1, h2, .page-title {
+    color: var(--color-navy);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-heading);
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-ink);
+    font-size: var(--font-size-menu);
+    font-weight: var(--font-weight-menu);
+    text-transform: uppercase;
+}
+
+.form-control, .input-custom {
+    border: var(--border-input);
+    border-radius: var(--radius-sm);
+}

@@ -1,5 +1,9 @@
-wwwroot\css\tokens.css
+wwwroot\css\font.css
+wwwroot\css\layout.css
 wwwroot\favicon.ico
+wwwroot\fonts\Gotham-Medium.otf
+wwwroot\fonts\Gotham-Thin.otf
+wwwroot\fonts\Gotham-Ultra.otf
 wwwroot\img\doi_tac\banner.jpg
 wwwroot\img\doi_tac\logo-banner.png
 wwwroot\img\doi_tac\logo_partner-introduce\intro_marvella.jpg
@@ -160,3 +164,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\layout_admin.css
