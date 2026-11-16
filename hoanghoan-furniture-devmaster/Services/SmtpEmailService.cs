@@ -1,4 +1,5 @@
 ﻿using hoanghoan_furniture_devmaster.Configuration;
+using MailKit;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Options;
@@ -37,7 +38,7 @@ namespace hoanghoan_furniture_devmaster.Services
 
             await client.ConnectAsync(_smtp.Host, _smtp.Port, socketOptions, cancellationToken);
             await client.AuthenticateAsync(_smtp.SenderEmail, _smtp.Password, cancellationToken);
-            await client.SendAsync(message, cancellationToken);
+            await client.SendAsync(FormatOptions.Default, new SendRequest(message) , cancellationToken);
             await client.DisconnectAsync(true, cancellationToken);
         }
     }
