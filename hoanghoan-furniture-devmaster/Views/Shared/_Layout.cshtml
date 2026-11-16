@@ -1,8 +1,18 @@
-﻿<!DOCTYPE html>
+﻿@using hoanghoan_furniture_devmaster.Configuration;
+@using Microsoft.Extensions.Options;
+@inject IOptions<SiteSettings> SiteOptions;
+@inject IOptions<SeoSettings> SeoOptions;
+
+@{
+    var site = SiteOptions.Value;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="nội thất , hoàng hoan , ..." />
+    <meta name="keywords" content="Sứ mệnh của chúng tôi là kết hợp hài hòa giữa ý tưởng và mong muốn của khách hàng, đem lại những phút giây thư giãn tuyệt vời bên gia đình và những người thân yêu."/>
     <title>@ViewData["Title"] - hoanghoan_furniture_devmaster</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
@@ -41,6 +51,13 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2026 - hoanghoan_furniture_devmaster - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        <div>
+            <h3>
+                @site.CompanyName;
+                @site.Hotline;
+                @site.CompanyAddress;
+            </h3>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

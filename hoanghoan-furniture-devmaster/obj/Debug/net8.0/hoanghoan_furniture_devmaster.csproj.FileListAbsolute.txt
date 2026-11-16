@@ -288,6 +288,12 @@ D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\hoangh
 D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\hoanghoan_furniture_devmaster.runtimeconfig.json
 D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\hoanghoan_furniture_devmaster.dll
 D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\hoanghoan_furniture_devmaster.pdb
-D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\obj\Debug\net8.0\hoanghoan_furniture_devmaster.genruntimeconfig.cache
 D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\obj\Debug\net8.0\ref\hoanghoan_furniture_devmaster.dll
+D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\MailKit.dll
+D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\MimeKit.dll
+D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\obj\Debug\net8.0\swae.build.ex.cache
+D:\hoanghoan-furniture-mvc\hoanghoan-furniture-devmaster\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
