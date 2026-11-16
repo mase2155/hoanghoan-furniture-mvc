@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("hoanghoan_furniture_devmaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e84e929469c210265af364a127b790bb2b38ca63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a6783428d269c00ee36822d46ddd43512d8fcf3")]
 [assembly: System.Reflection.AssemblyProductAttribute("hoanghoan_furniture_devmaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("hoanghoan_furniture_devmaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

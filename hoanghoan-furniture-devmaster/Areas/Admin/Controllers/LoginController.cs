@@ -21,5 +21,11 @@ namespace hoanghoan_furniture_devmaster.Areas.Admin.Controllers
             HttpContext.Session.SetString("AdminLogin", login.email);
             return RedirectToAction("Index", "Dashboard");
         }
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("AdminLogin");
+            return RedirectToAction("Index");
+        }
     }
 }
