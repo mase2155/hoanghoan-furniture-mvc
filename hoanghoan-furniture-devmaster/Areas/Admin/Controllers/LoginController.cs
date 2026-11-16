@@ -19,7 +19,7 @@ namespace hoanghoan_furniture_devmaster.Areas.Admin.Controllers
                 return View(login);
             }
             HttpContext.Session.SetString("AdminLogin", login.email);
-            return RedirectToAction("Index" , "Dashboard");
+            return RedirectToAction("Index", "Dashboard");
         }
     }
 }

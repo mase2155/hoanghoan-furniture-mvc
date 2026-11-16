@@ -1,61 +1,80 @@
 ﻿@model hoanghoan_furniture_devmaster.Areas.Admin.Models.Login
 @{
-    Layout = null;
+	ViewData["Title"] = "Login";
+	Layout = null;
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login | AdminPanel</title>
-    <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
-    <!-- File CSS riêng của bạn -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css" />
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
+    <!-- Theme style (AdminLTE) -->
+    <link rel="stylesheet" href="~/dist/css/adminlte.min.css" />
+    <!-- Custom CSS tách riêng -->
     <link rel="stylesheet" href="~/css/admin-login.css" asp-append-version="true" />
 </head>
-<body class="login-page">
-
+<body class="hold-transition login-page">
     <div class="login-box">
-        <div class="login-logo">
-            <a href="#"><b>Admin</b>CPane</a>
-        </div>
-
-        <div class="login-card">
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="h1">
+                    <b>Admin</b> CPanel
+                </a>
+            </div>
             <div class="card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
 
+                <!-- Hiển thị lỗi tổng quát (ví dụ: Sai tài khoản hoặc mật khẩu) -->
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
                 <form asp-area="Admin" asp-controller="Login" asp-action="Index" method="post">
-                    <!-- Ô nhập Email / Tài khoản -->
-                    <div class="input-group">
-                        <input type="email" class="form-control" asp-for="email" placeholder="Email...">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+                    <!-- Input Email -->
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" asp-for="email" placeholder="Email..." autocomplete="username" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
                             </div>
                         </div>
+                        <span asp-validation-for="email" class="text-danger validation-message"></span>
                     </div>
-                    <span class="text-danger" asp-validation-for="email"></span>
 
-                    <!-- Ô nhập Password -->
-                    <div class="input-group">
-                        <input type="password" class="form-control" asp-for="password" placeholder="Password...">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                    <!-- Input Password -->
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <input type="password" class="form-control" asp-for="password" placeholder="Password..." autocomplete="current-password" />
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
                             </div>
                         </div>
+                        <span asp-validation-for="password" class="text-danger validation-message"></span>
                     </div>
-                    <span class="text-danger" asp-validation-for="password"></span>
 
-                    <!-- Phần ghi nhớ và nút Submit -->
-                    <div class="login-row">
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" id="remember">
-                            <label for="remember">Remember Me</label>
+                    <!-- Remember Me & Submit -->
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" asp-for="remember" id="remember" />
+                                <label for="remember">
+                                    Remember Me
+                                </label>
+                            </div>
                         </div>
-                        <button type="submit" class="btn-signin">Sign In</button>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -64,6 +83,11 @@
 
     <!-- jQuery -->
     <script src="~/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/dist/js/adminlte.min.js"></script>
+    <!-- Client-side Validation của .NET 8 (Tùy chọn nhưng khuyên dùng) -->
+    <partial name="_ValidationScriptsPartial" />
 </body>
 </html>
