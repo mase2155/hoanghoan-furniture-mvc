@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using hoanghoan_furniture_devmaster.Models.DBModel;
 
 namespace hoanghoan_furniture_devmaster.Data
 {
@@ -9,5 +10,6 @@ namespace hoanghoan_furniture_devmaster.Data
             : base(options)
         {
         }
+      
     }
 }

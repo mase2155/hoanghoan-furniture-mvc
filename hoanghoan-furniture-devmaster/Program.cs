@@ -1,5 +1,6 @@
 ﻿using hoanghoan_furniture_devmaster.Configuration;
 using hoanghoan_furniture_devmaster.Data;
+using hoanghoan_furniture_devmaster.Models.DBModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -30,6 +31,8 @@ namespace hoanghoan_furniture_devmaster
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(connectionString));
+            builder.Services.AddDbContext<HoangHoanFurniteDevMasterContext>(options =>
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
             
