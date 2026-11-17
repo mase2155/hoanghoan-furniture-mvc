@@ -1,6 +1,6 @@
-## Visual Studio
-/[Bb]in/
-/[Oo]bj/
+## Visual Studio (any project folder under repo root)
+[Bb]in/
+[Oo]bj/
 .vs/
 *.user
 *.suo
